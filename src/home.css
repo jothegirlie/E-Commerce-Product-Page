@@ -1,0 +1,374 @@
+body{
+margin:0;
+box-sizing: border-box;
+font-family: "Kumbh Sans";
+}
+
+.home-main{ 
+    
+    width:100%;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.hero{
+    box-sizing: border-box;
+    display: flex;
+    width:100%;
+    background-color: hsl(26, 100%, 55%);
+    align-items: center;
+    padding:4rem;
+    justify-content: space-around;
+}
+
+.hero-context{
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero-context h1{
+    color:hsl(220, 13%, 13%);
+    font-family: "Kumbh Sans";
+    font-size: 4rem;
+}
+
+.hero-context > button{
+    padding:20px;
+    font-weight: 800;
+    color:hsl(26, 100%, 55%);
+    background-color: black;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border:2px solid transparent;
+    transition: all 0.3s ease;
+    padding:0.5rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.hero-context > button:hover{
+transform:translateY(-2px);
+color:black;
+background-color: hsl(26, 100%, 55%);
+border-color:black;
+}
+
+.hero-img{
+width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero-img > img{
+    width:100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.top-brands{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.top-brands > h2{
+font-family: "Kumbh Sans";
+    font-size: 2rem;
+
+}
+
+.top-brands > p{
+font-family: "Kumbh Sans";
+    font-size: 1rem;
+width:50%;
+text-align: center;
+}
+
+.logos{
+    display: flex;
+    justify-content:center;
+    display: 1rem;
+    align-items: center;
+    width:100%;
+}
+
+.logos > img{
+    width:60px;
+    height:auto;
+}
+
+footer{
+    background-color: black;
+    width:100%;
+    height:5rem;
+    
+}
+
+
+.social-media{
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    background-color: black;
+    padding: 2rem;
+    gap:2rem;
+}
+
+.social-media > h2{
+    font-size: 2rem;
+}
+
+.social-media > p{
+    font-size: 1rem;
+    width:50%;
+    text-align: center;
+}
+
+
+.social-media-icons{
+    width:20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media-icons > i{
+    font-size: 2rem;
+    transition:all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-media-icons > i:hover{
+    transform: scale(1.1);
+    color:hsl(26, 100%, 55%);
+}
+
+.description{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.description-text{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description-text p{
+    margin-bottom:0.5rem;
+}
+
+.description-text > h3{
+    color:hsl(219, 9%, 45%);
+    margin:0rem,0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.description-text > h2 {
+    font-size: 2rem;
+}
+
+#carouselExample {
+    width:80%;
+}
+
+#carouselExample img {
+width:80%;
+height:700px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    background-color: black;
+    width:100%;
+    padding:2rem;
+    gap:2rem;
+}
+
+.benefit span{
+    text-decoration: underline;
+    color:white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.benefit span:hover{
+    color:hsl(26, 100%, 55%);
+}
+
+.benefits-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width:50%;
+}
+
+.left-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:45%;
+    gap:1rem;
+}
+
+.option{
+    display:flex;
+    justify-content: flex-start;
+    gap:1rem;
+    align-items: center;
+    padding: 0.5rem;
+    flex-direction: row;
+    width:80%;
+}
+
+.right-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:45%;
+    gap:1rem;
+}
+
+.option p {
+    margin:0;
+}
+
+.benefit button{
+    background-color: white;
+    color:black;
+    padding:0.5rem 2rem;
+    border-radius: 0.5rem;
+    border:2px solid transparent;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.benefit button:hover{
+transform: translateY(-2px);
+border:2px solid white;
+background-color: black;
+color:white;
+}
+
+footer > p{
+    margin: 0;
+}
+
+footer{
+    background-color: white;
+    color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:4rem;
+}
+
+@media(max-width:1000px){
+.hero-context > h1{
+    font-size:2rem;
+}
+#carouselExample{
+    width:90%;
+    height:400px;
+}
+#carouselExample img {
+    width:100%;
+    height:400px;
+}
+
+.social-media-icons{
+    width:40%;
+}
+
+.benefits-options{
+width:100%;
+}
+.left-options{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+}
+
+@media(max-width:700px){
+.hero{
+    flex-direction: column;
+}
+.hero-context{
+    width:100%;
+    align-items: center;
+    text-align: center;
+}
+.hero-context > h1{
+    font-size: 2rem;
+}
+
+.hero-img{
+    margin-top: 1rem;
+    width:100%;
+}
+
+.top-brands > p{
+    width:100%;
+}
+
+.social-media >h2{
+    font-size: 1.5rem;
+}
+
+.social-media-icons{
+    width:60%;
+}
+.description-text{
+    width:100%;
+    align-items: center;
+}
+.benefits-options{
+width:100%;
+}
+
+#carouselExample{
+    width:90%;
+    height:400px;
+}
+#carouselExample img {
+width:100%;
+height:400px;
+}
+
+
+}

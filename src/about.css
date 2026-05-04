@@ -1,0 +1,106 @@
+.about-main{
+    box-sizing: border-box;
+    font-family: "Kumbh Sans"; 
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-us{
+    display: flex;
+    color:white;
+    background-color: black;
+    width:100%;
+    flex-direction: row;
+    padding: 3rem 1rem;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+
+}
+
+.about-us > img{
+    width:500px;
+    height:400px;
+}
+
+
+.about-text{
+    display: flex;
+    width:45%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.description-about{
+    color:black;
+    background-color: white;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.description-about > h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.description-benefits{
+    margin-top: 2rem;
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefits-plus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-mission{
+    display: flex;
+    color:white;
+    background-color: black;
+    width:100%;
+    flex-direction: row;
+    padding: 3rem 1rem;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+
+}
+
+.our-mission > img{
+     width:500px;
+    height:400px;
+}
+
+@media(max-width:1000px){
+    .about-us, .our-mission{
+        flex-direction: column;
+        gap:1rem;
+    }
+    .about-text, .mission-text{
+        width:90%;
+        align-items: center;
+        text-align: center;
+    }
+    .about-main img{
+        width:300px;
+        height:200px;
+    }
+
+
+
+}

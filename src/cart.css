@@ -1,0 +1,85 @@
+.cart {
+    width: 320px;          
+    max-width: calc(100vw - 2rem); 
+    max-height: 80vh;      
+    overflow-y: auto;
+ 
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+ 
+
+    position: absolute;
+    top: calc(100% + 8px); 
+    right: 0;              
+    z-index: 999;
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+ 
+
+.cart-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;           
+}
+ 
+.cart-dropdown > img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+ 
+.cart-dropdown-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;               
+    min-width: 0;           
+}
+ 
+.cart-dropdown-text > h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+.cart-dropdown-text > p {
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+ 
+.cart i {
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: color 0.15s ease;
+}
+ 
+.cart i:hover {
+    color: red;
+}
+ 
+
+.active-size {
+    background-color: black;
+    color: white;
+}
+ 
+@media (max-width: 480px) {
+    .cart {
+        width: calc(100vw - 2rem);
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}
+ 

@@ -1,0 +1,85 @@
+.contact{
+    box-sizing: border-box;
+    font-family: "Kumbh Sans";
+    background-color: white;
+    color:black;
+    display: flex;
+    justify-content: center;
+    gap:5%;
+    padding: 3rem 1rem;
+    align-items: center;
+    flex-direction: row;
+    width:100%;
+}
+
+
+.contact-form, .visit-us{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width:45%;
+}
+
+.contact-form{
+    gap:4rem;
+}
+
+.visit-us{
+    align-items: center;
+    gap:1rem;
+}
+
+.contact-form > form{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.contact-form > form > input{
+    color:black;
+    background-color: transparent;
+    border:none;
+    padding: 1rem;
+    border-bottom: 2px solid gray;
+    width:400px;
+}
+
+.contact-form > form > input::placeholder{
+    color:gray;
+}
+
+.contact-form > form > button{
+    padding: 1rem;
+    background-color: black;
+    color:white;
+    border:none;
+    border-radius: 10px;
+}
+
+.social-media-icons-contact {
+    display: flex;
+    flex-direction: row;
+    width:30%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media-icons-contact > i{
+    color:black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media(max-width:1000px){
+    .contact{
+        flex-direction: column;
+        gap:5rem;
+    }
+    .contact-form{
+        width:90%;
+    }
+    .visit-us{
+        width: 90%;
+    }
+}
