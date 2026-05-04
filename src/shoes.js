@@ -1,4 +1,4 @@
-import dunkLow from "./images/dunkLow.jpg"
+import dunkLow from "./images/dunklow.jpg"
 import adidasorg from "./images/adidasorg.jpg"
 import adidasown from "./images/adidasown.jpg"
 import airmax from "./images/airmax.jpg"
