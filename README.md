@@ -5,16 +5,18 @@
 
 
 📄 About
-A sleek product page for SNEAKER COMPANY's Fall Limited Edition collection. Users can select a quantity, and manage their cart, all from a single, focused product page.
+
+A modern and responsive fashion website built with React, featuring separate Home, About, Men, and Women sections. Users can easily navigate between pages using React Router, browse products, and use filtering options to find items based on their preferences.
+
 
 ✨ Features
 
-🖼️ Product Display — Hero image with product name, description, and pricing
-💸 Discount Pricing — Shows sale price alongside the original crossed-out price (50% off!)
-➕➖ Quantity Selector — Increment or decrement the number of pairs before adding to cart
-🛒 Add to Cart — Adds the selected quantity of shoes to the cart
-🗑️ Cart Management — View items currently in your cart and remove them individually
-📦 Cart Summary — Displays item count and total at a glance
+🏠 Home Page — A welcoming landing page with an overview of the store and featured products.
+🧭 React Router Navigation — Smooth navigation between the Home, About, Men, and Women sections using React Router.
+ℹ️ About Page — Provides information about the website, brand, and overall concept.
+👨 Men’s Section — Dedicated product section featuring items for men.
+👩 Women’s Section — Dedicated product section featuring items for women.
+🔎 Product Filtering — Filter and narrow down products based on selected categories and preferences.
 
 
 🛠️ Tech Stack
@@ -22,24 +24,8 @@ A sleek product page for SNEAKER COMPANY's Fall Limited Edition collection. User
 HTML5
 CSS3
 React
-
-
-🔮 Future Improvements
-This is a work in progress 🚧 here's what's planned next:
-
-🏗️ Full E-Commerce Site, expand beyond the single product page to include:
-
-A homepage / landing page
-A full product catalog / listings page
-Category filtering and search
-Individual product detail pages
-
-
-📱 Complete Responsive Design , finish and polish the mobile layout:
-
-Fully fluid grid for all screen sizes
-Touch-friendly cart interactions
-Optimized images for smaller screens
+Tailwind CSS
+ 
 
 🤝 Contributing
 Since this is a work in progress, contributions, suggestions, and feedback are welcome! Feel free to open an issue or submit a pull request.

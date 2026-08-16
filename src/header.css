@@ -1,0 +1,78 @@
+header{
+    display: flex;
+    width:100%;
+    height:70px;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    gap:40%;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 10px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+a, .fa-cart-shopping ,.heart{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+a:hover, .fa-cart-shopping:hover, .heart:hover{
+    transform: translateY(-5px);
+    color:hsl(26, 100%, 55%);
+}
+
+a.active{
+    color:gray
+}
+
+.leftNav > img {
+    width:110px;
+    height:30px;
+
+}
+
+.leftNav > h3{
+    font-family: Kumbh Sans;
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
+    font-size:17px;
+    height: 100%;
+    padding:37px 0px 37px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.leftNav > h3:hover{
+    color:black;
+    transform: translateY(-2px);
+    font-weight: 600;
+}
+
+.leftNav {
+    display: flex;
+    width:40%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightNav{
+    display: flex;
+    width:10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profilePic{
+    width:50px;
+    height:50px;
+}
+
+
+
+

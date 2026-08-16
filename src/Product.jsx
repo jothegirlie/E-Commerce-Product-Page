@@ -1,5 +1,6 @@
 import "./product.css"
 import React from "react"
+import Heart from "./HeartComponent/Heart"
 
 
 export default function Product ({selectedShoe,setCartItems, setShoeSize}){

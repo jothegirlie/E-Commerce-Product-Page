@@ -13,21 +13,19 @@ export default function Home({setPage}){
 
 
     return(<>
-<main className='home-main'>
-<section className='hero'>
-<div className='hero-context'>
-<h1>The journey beginns with the 
-    perfect pair.
-</h1>
-<button onClick={()=> setPage("signUp")}>Sign Up</button>
-</div>
-<div className='hero-img'>
-    <img src={nikey} alt="Black Nike Shoes" />
-    
-</div>
-</section>
-
-<section className='top-brands'>
+    <main className='home-main'>
+        <section className='hero'>
+            <div className='hero-context'>
+                <h1>The journey beginns with the 
+                    perfect pair.
+                </h1>
+                <button onClick={()=> setPage("signUp")}>Sign Up</button>
+            </div>
+            <div className='hero-img'>
+                <img src={nikey} alt="Black Nike Shoes" />
+            </div>
+        </section>
+        <section className='top-brands'>
 <h2>Top Brands</h2>
 
 <p>Discover premium footwear from the world’s most trusted brands.

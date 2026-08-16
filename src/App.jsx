@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Home from './Home'
-import Men from './Men'
+import Men from './Men.jsx'
 import Women from "./Women"
 import Product from './Product'
 import About from './About'
@@ -9,6 +9,10 @@ import Contact from './Contact'
 import SignUp from './Sing-up'
 
 import images from "./images"
+
+
+
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 export default function App(){
 
@@ -26,20 +30,25 @@ const removeFromCart = (index) =>{
 }
 
   return(
-     <>
-    <Header count={count} addCart={addCart} image={isActive} setAddCart={setAddCart}
-    setPage={setPage} cartItems={cartItems} removeFromCart={removeFromCart}/>
-    <main>   
-       {page==="home" && <Home setPage={setPage}/>}
-       {page==="men" && <Men setSelectedShoe={setSelectedShoe} setPage={setPage} />}
-       {page==="women" && <Women setSelectedShoe={setSelectedShoe} setPage={setPage}/>}
-       {page ==="product" &&  <Product selectedShoe={selectedShoe} setCartItems={setCartItems} 
-       cartItems={cartItems}/>}
-       {page==="about" && <About/>}
-       {page==="contact" && <Contact/>}
-       {page==="signUp" && <SignUp/>}
-  </main>
+  
+     
+     <BrowserRouter>
+     
+       <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/men" element={<Men/>} />
+          <Route path="/women" element={<Women/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
+          
+        </Routes>
+     
+     
+     </BrowserRouter>
 
-    </>
+
+    
   )
 }
+

@@ -1,39 +1,48 @@
-# Front-end Style Guide
+#MEN
 
-## Layout
 
-The designs were created to the following widths:
+const [openFilter, setOpenFilter] = React.useState(null);
+const [selectedFilters, setSelectedFilters] = React.useState({
+    brands:[],
+    colors:[],
+    minPrice:"",
+    maxPrice:"",
+})
 
-- Mobile: 375px
-- Desktop: 1440px
+const [selectedType, setSelectedType] = React.useState(null);
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+const filteredShoes = shoes.filter(shoe => {
+    const brandMatch = selectedFilters.brands.length === 0 || selectedFilters.brands.includes(shoe.brand)
+    const colorMatch = selectedFilters.colors.length === 0 || selectedFilters.colors.includes(shoe.color)
+    const priceMatch = 
+    (selectedFilters.minPrice === "" || shoe.price >= Number(selectedFilters.minPrice)) &&
+    (selectedFilters.maxPrice === "" || shoe.price <= Number(selectedFilters.maxPrice))
+    const typeMatch = selectedType === null || shoe.type === selectedType
+    return brandMatch && colorMatch && priceMatch && typeMatch
+    
 
-## Colors
+})
 
-### Primary
 
-- Orange: hsl(26, 100%, 55%)
-- Pale orange: hsl(25, 100%, 94%)
+const handleBrand = (e) => {
+    const value = e.target.name
+    setSelectedFilters(prev => ({
+        ...prev,
+        brands: e.target.checked 
+            ? [...prev.brands, value]     
+            : prev.brands.filter(b => b !== value)  
+    }))
+}
 
-### Neutral
+const handlePrice = (e) => {
+    setSelectedFilters(prev => ({
+        ...prev, [e.target.name]: e.target.value
+    }))
+}
 
-- Very dark blue: hsl(220, 13%, 13%)
-- Dark grayish blue: hsl(219, 9%, 45%)
-- Grayish blue: hsl(220, 14%, 75%)
-- Light grayish blue: hsl(223, 64%, 98%)
-- White: hsl(0, 0%, 100%)
-- Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 16px
-
-### Font
-
-- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700
-
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+const handleColor = (e) => {
+    const value = e.target.name
+    setSelectedFilters(prev => ({...prev,
+        colors: e.target.checked ? [...prev.colors, value] : prev.colors.filter(c => c!== value)
+    }))
+}

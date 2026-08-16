@@ -1,0 +1,94 @@
+.section-with-products {
+    display: flex;
+    width:80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    gap:2rem;
+    background-color: black;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    background-color: #1C1C1E;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    gap:1rem;
+     border-radius: 5px;
+}
+
+.product > img{
+    width:50%;
+    height:50%;
+}
+
+.toggle-heart{
+    width:100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.product-info{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.info-prd{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:auto;
+}
+
+
+.section-with-products .fa-heart{
+    cursor: pointer;
+    color:white;
+}
+
+.active-filter{
+
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:2rem;
+    color:white;
+}
+
+
+.filter-used{
+    background-color: #1C1C1E;
+    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:fit-content;
+    gap:2rem;
+    border-radius: 5px;
+}
+
+.filter-used > i{
+    cursor: pointer;
+}
+
+.not-available{
+    color:white;
+}

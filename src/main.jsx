@@ -1,9 +1,16 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { makeServer } from "./api/server";
 
-createRoot(document.getElementById('root')).render(
-<>
+if (import.meta.env.DEV) {
+  makeServer();
+}
+
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <App />
-  </>
-)
+  </React.StrictMode>
+);
