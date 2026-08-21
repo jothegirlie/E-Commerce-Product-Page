@@ -12,10 +12,15 @@ A modern and responsive fashion website built with React, featuring separate Hom
 ✨ Features
 
 🏠 Home Page — A welcoming landing page with an overview of the store and featured products.
+
 🧭 React Router Navigation — Smooth navigation between the Home, About, Men, and Women sections using React Router.
+
 ℹ️ About Page — Provides information about the website, brand, and overall concept.
+
 👨 Men’s Section — Dedicated product section featuring items for men.
+
 👩 Women’s Section — Dedicated product section featuring items for women.
+
 🔎 Product Filtering — Filter and narrow down products based on selected categories and preferences.
 
 
