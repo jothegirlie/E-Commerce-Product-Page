@@ -14,20 +14,20 @@
 .product{
     display: flex;
     flex-direction: column;
-    width:40%;
+    width:30%;
     background-color: #1C1C1E;
     color:white;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     padding: 2rem;
-    gap:1rem;
-     border-radius: 5px;
+    gap:2rem;
+    border-radius: 5px;
 }
 
-.product > img{
-    width:50%;
-    height:50%;
+.product img{
+    width:300px;
+    height:250px;
 }
 
 .toggle-heart{
@@ -45,6 +45,11 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.section-with-products a{
+    color:white;
+    text-decoration: none;
 }
 
 .info-prd{

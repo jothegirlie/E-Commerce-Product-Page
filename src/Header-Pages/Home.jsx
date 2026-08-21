@@ -1,13 +1,13 @@
-import Header from './Header'
+
 import "./home.css"
-import nikey from "./images/nikey.jpg"
-import nikelogo from "./images/nikelogo.jpg"
-import adidaslogo from "./images/adidas.jpg"
-import levislogo from "./images/levis.png"
-import vanslogo from "./images/vans.jpg"
-import c1 from "./images/c1.jpg"
-import c2 from "./images/c2.jpg"
-import c3 from "./images/c3.jpg"
+import nikey from "../images/nikey.jpg"
+import nikelogo from "../images/nikelogo.jpg"
+import adidaslogo from "../images/adidas.jpg"
+import levislogo from "../images/levis.png"
+import vanslogo from "../images/vans.jpg"
+import c1 from "../images/c1.jpg"
+import c2 from "../images/c2.jpg"
+import c3 from "../images/c3.jpg"
 
 export default function Home({setPage}){
 
@@ -133,10 +133,6 @@ export default function Home({setPage}){
     <button>GET THE BENEFITS</button>
 </section>
 
-
-<footer>
-    <p>@2026 SNEAKERS</p>
-</footer>
 </main>
 
 

@@ -3,7 +3,9 @@ import "./Products.css";
 import ToggleButton from "../HeartComponent/ToggleButton";
 import ToggleOn from "../HeartComponent/ToggleOn";
 import ToggleOff from "../HeartComponent/ToggleOff";
-import { useSearchParams } from "react-router-dom";
+import { Link,useSearchParams } from "react-router-dom";
+
+import { heartContext } from "../HeartComponent/Heart";
 
 
 import Filter from "../ProductPageNav/Filter"
@@ -18,14 +20,23 @@ export default function Products({ gender }) {
   const min = searchParams.get("min")
   const max = searchParams.get("max")
 
+  const dbgender = gender === "male" ? "men" : "women"
+
+  const {setFavorites} = React.useContext(heartContext)
+  const {favorites} = React.useContext(heartContext)
+
+
+
 
   const [products, setProducts] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("/api/products")
+    fetch("http://localhost:5000/api/products")
       .then((res) => res.json())
       .then((res) => {
-        setProducts(res.products);
+        setLoading(true);
+        setProducts(res);
       });
   }, []);
 
@@ -67,14 +78,35 @@ export default function Products({ gender }) {
         {min && <Filter name={"Minimum price"} value={min} />}
 
       </section>
-      {displayedProducts.length===0 &&
+      {!loading && 
+      <div role="status" aria-live="polite" class="flex items-center justify-center space-x-2">
+        <div class="h-8 w-8 animate-spin rounded-full border-4 border-solid
+         border-orange-500 border-t-transparent motion-safe:animate-spin motion-reduce:hidden">
+        </div>
+        <span class="sr-only">Loading...</span>
+        <p class="text-orange-600 motion-reduce:hidden dark:text-slate-300">Loading...</p>
+        <p class="hidden text-slate-600 motion-reduce:block dark:text-slate-300">
+    Please wait, content is loading.
+  </p>
+</div>}
+      {loading && displayedProducts.length===0 &&
       <h4 className="not-available">No products are available!</h4>
       }
       {displayedProducts.map((product) => (
-        <div className="product" key={product.id}>
-          
-          <div className="toggle-heart">
-            <ToggleButton id={product.id}>
+
+        
+          <Link to={`/${dbgender}/${product.id}`} className="product" key={product.id} >
+          <div className="toggle-heart" onClick={(e) =>
+            {e.stopPropagation()
+            e.preventDefault()}
+          }>
+            <ToggleButton onClick={()=> {
+              favorites.some(favorites => favorites.id === product.id) ? 
+              setFavorites(favorites.filter((fav)=> fav.id!= product.id )) :
+              setFavorites(prev => [...prev, product])
+              console.log(favorites)
+            }}
+            >
               <ToggleOn id={product.id}>
                 <i className="fa-solid fa-heart"></i>
               </ToggleOn>
@@ -83,20 +115,21 @@ export default function Products({ gender }) {
                 <i className="fa-regular fa-heart"></i>
               </ToggleOff>
             </ToggleButton>
+        
           </div>
 
           <img src={product.image} alt="" />
-
           <div className="product-info">
             <div className="info-prd">
               <h4>{product.name}</h4>
               <p>{product.company}</p>
             </div>
-
             <h4>{`${product.price}$`}</h4>
           </div>
+            </Link>
 
-        </div>
+          
+  
       ))}
     </section>
   );

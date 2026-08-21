@@ -252,3 +252,7 @@ p{
 .color-link.active{
     color:white;
 }
+
+.shoe-navi a {
+    text-decoration: none;
+}

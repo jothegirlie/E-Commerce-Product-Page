@@ -1,16 +1,18 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { makeServer } from "./api/server";
+import Heart from "./HeartComponent/Heart.jsx"
+import Cart from "./CartComponent/Cart.jsx"
 
-if (import.meta.env.DEV) {
-  makeServer();
-}
 
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Cart>
+    <Heart>
     <App />
+    </Heart>
+    </Cart>
   </React.StrictMode>
 );

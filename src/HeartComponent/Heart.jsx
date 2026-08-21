@@ -6,20 +6,20 @@ const heartContext = React.createContext()
 
 export default function Heart({children}){
 
-    const [on,setOn] = React.useState(false)
-    const [favorites,setFavorites] = React.useState([])
+    const [favorites,setFavorites] = React.useState([
+      
+    ])
 
-    function addFav(id) {
-        setFavorites((prev) => {
-            if (prev.includes(id)) {
-                return prev.filter((fav) => fav !== id);
+    const total = favorites.length;
+
+    function toggle(){
+        setOn(prev => !prev)
     }
-    return [...prev, id];
-  });
-}
+
+   
 
     return(
-        <heartContext.Provider value={{addFav,favorites}}>
+        <heartContext.Provider value={{favorites, setFavorites, toggle ,total}}>
             {children}
         </heartContext.Provider>
     )

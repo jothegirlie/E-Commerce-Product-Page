@@ -1,0 +1,158 @@
+.shoe-section{
+    width:100%;
+    background-color: gray;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:2rem;
+    background-color:black;
+    color:white;
+}
+
+
+.shoe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:40%;
+    gap:1rem;
+    height:550px;
+}
+
+.shoe a{
+    color:white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.shoe a:hover{
+    text-decoration: underline;
+}
+
+
+.links-back{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    width:60%;
+    align-items: flex-start;
+}
+
+#name {
+    color:gray;
+}
+
+.shoe-section img{
+    width:90%;
+    height: 100%;
+}
+
+.shoe-sizes{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.shoe-sizes h5 {
+    padding:0.5rem 1rem;
+    background-color: white;
+    color:black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shoe-sizes h5:hover{
+    background-color:black;
+    color:white;
+    border:2px solid white;
+    transform: translateY(-5px);
+}
+
+.shoe-section button{
+    background-color: hsl(26, 100%, 55%);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    color:black;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shoe-section button:hover{
+    background-color:white;
+    color:black;
+    transform: translateY(-5px);
+}
+
+h5.activeSize {
+  background-color: hsl(26, 100%, 55%)
+}
+
+
+.shoes-nav > nav{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.shoes-nav{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    gap:1rem;
+
+}
+
+.shoes-nav h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 0rem;
+}
+
+.shoes-nav h3:hover{
+    border-bottom: 3px solid hsl(26, 100%, 55%);;
+}
+
+.shoes-nav h3.active{
+    border-bottom: 3px solid hsl(26, 100%, 55%);;
+}
+
+
+#desc{
+    color:white;
+}
+
+
+.shoes-nav h4 {
+    margin:0;
+}
+
+.shoe-header{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.shoe-header > div{
+    width:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.shoe-header > div > h2{
+    font-weight: 800;
+}
+
+.shoe-header > div > h3{
+    font-weight: 300;
+    font-size: 1rem;
+    color:rgba(255, 255, 255, 0.505);
+
+}

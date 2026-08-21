@@ -11,12 +11,12 @@ export default function Women(){
 
 
     return(
-        <Heart>
+       
         <main className="gender-main">
         <ProductPageNav categories={["Sneakers", "Slides", "Boots", "Mocassins"]}
         />
         <Products gender={"female"}></Products>
         </main>
-        </Heart>
+       
     )
 }

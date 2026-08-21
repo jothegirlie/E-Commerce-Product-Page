@@ -1,6 +1,6 @@
 import "./about.css"
-import team from "./images/team.jpg"
-import mission from "./images/mission.jpg"
+import team from "../images/team.jpg"
+import mission from "../images/mission.jpg"
 
 export default function About(){
 
