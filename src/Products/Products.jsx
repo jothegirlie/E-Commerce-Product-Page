@@ -30,7 +30,7 @@ export default function Products({ gender }) {
   const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then((res) => res.json())
       .then((res) => {
         setLoading(true);

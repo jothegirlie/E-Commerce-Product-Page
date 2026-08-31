@@ -10,7 +10,7 @@ import c2 from "../images/c2.jpg"
 import c3 from "../images/c3.jpg"
 
 import { Link } from "react-router-dom"
-import LogIn from "../Registration/LogIn"
+
 
 export default function Home({ setPage }) {
 
