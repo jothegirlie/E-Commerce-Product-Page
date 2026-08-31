@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./header.css"
+import "./wishlist.css"
 
+import { cartContext } from "../CartComponent/Cart";
 import { heartContext } from "../HeartComponent/Heart";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,15 @@ export default function WishList(){
 
     const {favorites} = React.useContext(heartContext)
     const {setFavorites} = React.useContext(heartContext)
-    
+    const {setCartItems} = React.useContext(cartContext)
+    const [selectedSize, setSelectedSize] = React.useState(null)
+    const [isSubmited, setIsSubmited] = React.useState(false)
+
 
 
     return(
         <>
+        
         <div className="wishlist-header">
             <h3>WISHLIST</h3>
             <p>We all have things we want, and this is your personal wishlist.
@@ -37,7 +42,8 @@ export default function WishList(){
                     onClick={(e)=>{
                         e.preventDefault()
                         e.stopPropagation()
-                    }}>
+                    }}
+                    onChange={(e)=> setSelectedSize(e.target.value)}>
                         <option value="">Select a size</option>
                     {favorite.sizes.map((size)=>(
                          <option value={size} key={size}>{size}</option>
@@ -48,6 +54,9 @@ export default function WishList(){
                         <button onClick={(e)=>{
                             e.preventDefault();
                             e.stopPropagation();
+                            selectedSize!==null && 
+                            setCartItems((prev) => [...prev, {...favorite, size:selectedSize , quantity:1}])
+                            setIsSubmited(true);
                         }}>Add to Cart</button>
                          <i className="fa-solid fa-heart-circle-minus"
                          onClick={(e)=> {
@@ -55,6 +64,8 @@ export default function WishList(){
                             e.stopPropagation();
                             e.preventDefault();}}></i>
                     </div>    
+                    {isSubmited && selectedSize===null &&
+                        <p className="!text-red-500">Please select a size!</p>}
                 </Link>
 
             ))}

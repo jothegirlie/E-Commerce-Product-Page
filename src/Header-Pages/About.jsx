@@ -26,7 +26,13 @@ export default function About(){
             </section>
             <section className="description-about">
                 <h3>
-                    At Sneakers, our team is driven by a shared passion for sneaker culture and delivering the best possible shopping experience for our customers. We bring together experts in footwear curation, customer service, design, and logistics to ensure every pair we offer meets high standards of style, comfort, and authenticity. From sourcing the latest releases to carefully packing each order, we focus on every detail that matters to sneaker lovers. Our goal is to make it easy and exciting to find the perfect pair, while building a community that values quality, trust, and streetwear culture.
+                    At Sneakers, our team is driven by a shared passion for sneaker 
+                    culture and delivering the best possible shopping experience for our customers. 
+                    We bring together experts in footwear curation, customer service, design, and logistics 
+                    to ensure every pair we offer meets high standards of style, comfort, and authenticity. 
+                    From sourcing the latest releases to carefully packing each order, we focus on every detail 
+                    that matters to sneaker lovers. Our goal is to make it easy and exciting to find the perfect 
+                    pair, while building a community that values quality, trust, and streetwear culture.
                 </h3>
                 <section className="description-benefits">
                     <div className="benefits-plus">

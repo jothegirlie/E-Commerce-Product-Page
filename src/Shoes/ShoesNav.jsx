@@ -18,7 +18,6 @@ export default function ShoesNav({shoe}){
             </nav>
             {active ==="productInfo" &&
             <>
-            <p>{shoe.description}</p>
             <p><span id="desc">BRAND: </span> {shoe.brand}</p>
             <p><span id="desc">COLOR: </span> {shoe.color}</p>
             <p><span id="desc">TYPE: </span> {shoe.type}</p>

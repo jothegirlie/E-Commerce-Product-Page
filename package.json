@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@preline/carousel": "^5.0.0",
     "@tailwindcss/vite": "^4.3.3",
+    "flowbite": "^4.0.2",
     "framework7": "^9.1.2",
     "framework7-react": "^9.1.2",
     "miragejs": "^0.1.48",

@@ -71,15 +71,22 @@
     cursor: pointer;
 }
 
-@media(max-width:1000px){
+@media(max-width:500px){
     .contact{
         flex-direction: column;
         gap:5rem;
     }
     .contact-form{
         width:90%;
+        gap:1rem;
     }
     .visit-us{
         width: 90%;
+    }
+    .contact-form > form{
+        width:100%;
+    }
+    .contact-form > form > input{
+        width:100%;
     }
 }
